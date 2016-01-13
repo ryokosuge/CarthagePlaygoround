@@ -12,7 +12,23 @@
 		F8FF56841C468E4A005CF4E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8FF56821C468E4A005CF4E2 /* Main.storyboard */; };
 		F8FF56861C468E4A005CF4E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8FF56851C468E4A005CF4E2 /* Assets.xcassets */; };
 		F8FF56891C468E4A005CF4E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8FF56871C468E4A005CF4E2 /* LaunchScreen.storyboard */; };
+		F8FF56911C469095005CF4E2 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FF56901C469095005CF4E2 /* Himotoki.framework */; };
+		F8FF56921C469095005CF4E2 /* Himotoki.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8FF56901C469095005CF4E2 /* Himotoki.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F8FF56931C469095005CF4E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F8FF56921C469095005CF4E2 /* Himotoki.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F8FF567B1C468E4A005CF4E2 /* CarthagePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarthagePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,8 @@
 		F8FF56851C468E4A005CF4E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8FF56881C468E4A005CF4E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8FF568A1C468E4A005CF4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8FF56901C469095005CF4E2 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
+		F8FF56941C4690B5005CF4E2 /* CarthagePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CarthagePlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FF56911C469095005CF4E2 /* Himotoki.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +57,8 @@
 		F8FF56721C468E4A005CF4E2 = {
 			isa = PBXGroup;
 			children = (
+				F8FF56941C4690B5005CF4E2 /* CarthagePlayground.playground */,
+				F8FF56901C469095005CF4E2 /* Himotoki.framework */,
 				F8FF567D1C468E4A005CF4E2 /* CarthagePlayground */,
 				F8FF567C1C468E4A005CF4E2 /* Products */,
 			);
@@ -74,6 +95,7 @@
 				F8FF56771C468E4A005CF4E2 /* Sources */,
 				F8FF56781C468E4A005CF4E2 /* Frameworks */,
 				F8FF56791C468E4A005CF4E2 /* Resources */,
+				F8FF56931C469095005CF4E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +269,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthagePlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.ryochin.CarthagePlayground;
@@ -258,6 +284,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthagePlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.ryochin.CarthagePlayground;
@@ -284,6 +314,7 @@
 				F8FF568F1C468E4A005CF4E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
